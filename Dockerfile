@@ -8,4 +8,4 @@ RUN pip3 install --no-cache-dir -U -r requirements.txt
 COPY . .
 EXPOSE 5000
 
-CMD ["sh", "-c", "flask run -h 0.0.0.0 -p ${PORT:-5000} & exec python3 main.py"]
+CMD ["python3", "-u", "main.py"]
